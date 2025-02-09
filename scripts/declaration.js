@@ -545,6 +545,17 @@ const DECLARATIONS = [
   },
 ];
 
+function handleDetailClick(id) {
+  const filteteredDeclarations = DECLARATIONS.filter((item) => item.id === id);
+  if (filteteredDeclarations.length) {
+    const declaration = filteteredDeclarations[0];
+    console.log("====================================");
+    console.log(declaration);
+    console.log("====================================");
+  }
+  // traitement non achevé; aucun impact sur le html;
+}
+
 const COLONNES = `
 <div class="row">    
     <div class="col">
@@ -560,47 +571,68 @@ const COLONNES = `
       Enfant
     </div>
     <div class="col">
-     Hopital
+        Hopital
+    </div>
+     <div class="col">
+        Action
     </div>
 </div>
  `;
 
 function handleOnload() {
   const T_DECLARATIONS = DECLARATIONS.map((declaration, index) => {
+    const {
+      id,
+      registred,
+      firstParent: {
+        gender: fpGender,
+        birthdate: fpBirthdate,
+        firstname: fpFirstname,
+        lastname: fpLastname,
+        email: fpEmail,
+        phone: fpPhone,
+      },
+      secondParent: {
+        gender: spGender,
+        birthdate: spBirthdate,
+        firstname: spFirstname,
+        lastname: spLastname,
+        email: spEmail,
+        phone: spPhone,
+      },
+      child: {
+        birthdate: cBirthdate,
+        gender: cGender,
+        firstname: cFirstname,
+        lastname: cLastname,
+      },
+      compagny: { name: cName, address: cAddress },
+    } = declaration;
     return ` 
      <div class="py-2 ${index % 2 === 1 ? "row bg-light" : "row"}">
         <div class="col">
-            <p class="mb-0"> ${declaration.registred} </p>
+            <p class="mb-0"> ${registred} </p>
         </div>
         <div class="col">
-            <p class="mb-0">${declaration.firstParent.gender} ${
-      declaration.firstParent.birthdate
-    } ${declaration.firstParent.firstname} ${
-      declaration.firstParent.lastname
-    }</p>
-            <p class="mb-0">${declaration.firstParent.email}</p>
-            <p class="mb-0">${declaration.firstParent.phone}</p>
+            <p class="mb-0">${fpGender} ${fpBirthdate} ${fpFirstname} ${fpLastname}</p>
+            <p class="mb-0">${fpEmail}</p>
+            <p class="mb-0">${fpPhone}</p>
         </div>
         <div class="col">
-            <p class="mb-0">${declaration.secondParent.gender} ${
-      declaration.secondParent.birthdate
-    } ${declaration.secondParent.firstname} ${
-      declaration.secondParent.lastname
-    }</p>
-            <p class="mb-0">${declaration.secondParent.email} </p>
-            <p class="mb-0">${declaration.secondParent.phone}</p>
+            <p class="mb-0">${spGender} ${spBirthdate} ${spFirstname} ${spLastname}</p>
+            <p class="mb-0">${spEmail} </p>
+            <p class="mb-0">${spPhone}</p>
         </div>
         <div class="col">
-            <p class="mb-0">${declaration.child.gender} ${
-      declaration.child.birthdate
-    } ${declaration.child.firstname} ${declaration.child.lastname} ${
-      declaration.child.gender
-    }</p>
+            <p class="mb-0">${cGender} ${cBirthdate} ${cFirstname} ${cLastname}</p>
         </div>
 
          <div class="col">
-            <p class="mb-0">${declaration.compagny.name}</p>
-            <p class="mb-0">${declaration.compagny.address}</p>
+            <p class="mb-0">${cName}</p>
+            <p class="mb-0">${cAddress}</p>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-primary" onclick="handleDetailClick('${id}')">Action</button>
         </div>
   </div>`;
   });
