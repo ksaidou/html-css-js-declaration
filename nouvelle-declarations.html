@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <title>Document</title>
+</head>
+<body>
+     <section>
+    <main class="container" id="main">
+        <h1 id="declarations" class="d-flex justify-content-between">
+            <span>Déclarations</span>
+            <a href="nouvelle-declaration"> Déclarer une naissance</a>
+        </h1>
+        <div id="les_declarations">
+            <form class="row g-3" onsubmit="handleNewDeclaration(event)">
+            <div class="col-md-6">
+                <label for="fpfirstname" class="form-label">Prénom du 1er parent</label>
+                <input type="text" name="fpfirstname" class="form-control" id="fpfirstname">
+            </div>
+            <div class="col-md-6">
+                <label for="fplastname" class="form-label">Nom du 1er parent</label>
+                <input type="text" name="fplastname" class="form-control" id="fplastname">
+            </div>
+            <div class="col-md-6">
+                <label for="spfirstname" class="form-label">Prénom du 2e parent</label>
+                <input type="text" name="spfirstname" class="form-control" id="spfirstname">
+            </div>
+            <div class="col-md-6">
+                <label for="splastname" class="form-label">Nom du 2e parent</label>
+                <input type="text" name="splastname" class="form-control" id="splastname">
+            </div>
+            <div class="col-md-6">
+                <label for="chfirstname" class="form-label">Prénom de l'enfant</label>
+                <input type="text" name="chfirstname" class="form-control" id="chfirstname">
+            </div>
+            <div class="col-md-6">
+                <label for="chlastname" class="form-label">Nom de l'enfant</label>
+                <input type="text" name="chlastname" class="form-control" id="chlastname">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+            </div>
+            </form>
+        </div>       
+    </main> 
+    </section> 
+    <script src="/scripts/declaration.js" type="text/javascript"></script>     
+</body>
+</html>
