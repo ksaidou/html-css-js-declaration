@@ -1,551 +1,5 @@
-const DECLARATIONS = [
-  {
-    id: "67a8d16d81266ea7497ca685",
-    registred: "2017-04-06T07:00:52 -00:00",
-    child: {
-      birthdate: "2019-09-\t\t27T02:30:17 -00:00",
-      gender: "female",
-      firstname: "Robinson",
-      lastname: "Villarreal",
-    },
-    firstParent: {
-      birthdate: "2022-06-\t\t04T03:54:23 -00:00",
-      gender: "male",
-      firstname: "Clark",
-      lastname: "Vang",
-      email: "clarkvang@accufarm.com",
-      phone: "+1 (850) 468-3420",
-      address: "436 Hunts Lane, Lithium, New Hampshire, 8814",
-    },
-    secondParent: {
-      birthdate: "2020-10-\t\t30T08:49:56 -00:00",
-      gender: "male",
-      firstname: "Hill",
-      lastname: "Dickerson",
-      email: "hilldickerson@accufarm.com",
-      phone: "+1 (952) 599-3026",
-      address: "128 Butler Place, Enlow, Northern Mariana Islands, 7522",
-    },
-    compagny: {
-      name: "GEEKULAR",
-      address: "253 Adams Street, Dragoon, New Mexico, 9848",
-    },
-    comment:
-      "magna qui est aliqua pariatur id labore ipsum mollit dolor incididunt minim sint exercitation occaecat elit elit esse fugiat aute non non labore irure duis ullamco commodo quis velit veniam",
-  },
-  {
-    id: "67a8d16d7b23abb85c73225f",
-    registred: "2014-01-13T02:37:02 -00:00",
-    child: {
-      birthdate: "2018-06-\t\t20T03:27:25 -00:00",
-      gender: "male",
-      firstname: "Grace",
-      lastname: "Gonzales",
-    },
-    firstParent: {
-      birthdate: "2021-11-\t\t22T06:18:35 -00:00",
-      gender: "female",
-      firstname: "Hahn",
-      lastname: "Mckinney",
-      email: "hahnmckinney@geekular.com",
-      phone: "+1 (817) 453-3852",
-      address: "399 Newkirk Placez, Sheatown, North Carolina, 8020",
-    },
-    secondParent: {
-      birthdate: "2021-06-\t\t22T07:29:57 -00:00",
-      gender: "male",
-      firstname: "Mullen",
-      lastname: "Howe",
-      email: "mullenhowe@geekular.com",
-      phone: "+1 (851) 555-3971",
-      address: "943 Girard Street, Gibsonia, Georgia, 5432",
-    },
-    compagny: {
-      name: "ZILLAN",
-      address: "746 Harden Street, Fingerville, Rhode Island, 4408",
-    },
-    comment:
-      "aliquip tempor cupidatat nulla reprehenderit amet ullamco do sit duis esse ipsum anim dolore eu exercitation quis magna do eu qui eu duis Lorem ex adipisicing dolore proident minim ut",
-  },
-  {
-    id: "67a8d16d33edb2e6f1411c4f",
-    registred: "2022-02-07T01:00:49 -00:00",
-    child: {
-      birthdate: "2021-09-\t\t20T01:55:59 -00:00",
-      gender: "male",
-      firstname: "Myrna",
-      lastname: "Obrien",
-    },
-    firstParent: {
-      birthdate: "2016-02-\t\t24T05:36:01 -00:00",
-      gender: "female",
-      firstname: "Ray",
-      lastname: "Hansen",
-      email: "rayhansen@zillan.com",
-      phone: "+1 (932) 551-2915",
-      address: "306 Little Street, Eastvale, Ohio, 1508",
-    },
-    secondParent: {
-      birthdate: "2022-09-\t\t01T08:01:31 -00:00",
-      gender: "male",
-      firstname: "Clayton",
-      lastname: "Cervantes",
-      email: "claytoncervantes@zillan.com",
-      phone: "+1 (836) 489-2106",
-      address: "742 Grove Place, Muse, Wyoming, 9944",
-    },
-    compagny: {
-      name: "RONELON",
-      address: "168 Buffalo Avenue, Keller, Nebraska, 4350",
-    },
-    comment:
-      "ut do sunt et sit ut quis sint tempor officia est voluptate cupidatat consequat commodo aute est ad cillum proident et aliqua duis officia officia voluptate consectetur do labore labore",
-  },
-  {
-    id: "67a8d16d0c366910f793107f",
-    registred: "2015-03-18T09:41:16 -00:00",
-    child: {
-      birthdate: "2014-12-\t\t12T12:00:49 -00:00",
-      gender: "male",
-      firstname: "Oneil",
-      lastname: "Gibson",
-    },
-    firstParent: {
-      birthdate: "2018-12-\t\t29T06:03:39 -00:00",
-      gender: "male",
-      firstname: "Hopper",
-      lastname: "Sharp",
-      email: "hoppersharp@ronelon.com",
-      phone: "+1 (986) 541-2965",
-      address: "748 Noll Street, Chicopee, Hawaii, 6717",
-    },
-    secondParent: {
-      birthdate: "2015-08-\t\t01T04:53:54 -00:00",
-      gender: "male",
-      firstname: "Jackson",
-      lastname: "Gutierrez",
-      email: "jacksongutierrez@ronelon.com",
-      phone: "+1 (823) 481-2289",
-      address: "628 Dorchester Road, Veguita, South Dakota, 2756",
-    },
-    compagny: {
-      name: "MAZUDA",
-      address: "891 Hanover Place, Lafferty, Florida, 6749",
-    },
-    comment:
-      "consectetur irure proident velit nulla incididunt minim elit non proident qui nulla adipisicing dolor tempor quis ex non duis ex mollit dolore occaecat magna in Lorem dolor laborum anim id",
-  },
-  {
-    id: "67a8d16d98213468ea8e82e1",
-    registred: "2018-03-21T03:13:55 -00:00",
-    child: {
-      birthdate: "2020-10-\t\t01T04:26:17 -00:00",
-      gender: "male",
-      firstname: "Hopkins",
-      lastname: "Ferrell",
-    },
-    firstParent: {
-      birthdate: "2022-09-\t\t07T06:46:32 -00:00",
-      gender: "male",
-      firstname: "Ilene",
-      lastname: "Owen",
-      email: "ileneowen@mazuda.com",
-      phone: "+1 (849) 515-3799",
-      address: "929 Forrest Street, Hessville, New Jersey, 5301",
-    },
-    secondParent: {
-      birthdate: "2019-09-\t\t01T12:52:06 -00:00",
-      gender: "female",
-      firstname: "Suzette",
-      lastname: "Johns",
-      email: "suzettejohns@mazuda.com",
-      phone: "+1 (960) 520-3924",
-      address: "906 Kent Street, Malo, Oklahoma, 1053",
-    },
-    compagny: {
-      name: "DADABASE",
-      address: "411 Newel Street, Whipholt, Alaska, 6203",
-    },
-    comment:
-      "officia adipisicing eu labore elit Lorem non id commodo veniam culpa pariatur dolore veniam in pariatur Lorem sint officia voluptate incididunt elit pariatur irure cillum occaecat minim exercitation fugiat amet",
-  },
-  {
-    id: "67a8d16d41ad530774bfae6a",
-    registred: "2017-11-30T05:16:38 -00:00",
-    child: {
-      birthdate: "2018-01-\t\t24T03:18:11 -00:00",
-      gender: "female",
-      firstname: "Wilkinson",
-      lastname: "Tillman",
-    },
-    firstParent: {
-      birthdate: "2020-09-\t\t26T11:46:52 -00:00",
-      gender: "male",
-      firstname: "Elisabeth",
-      lastname: "Montgomery",
-      email: "elisabethmontgomery@dadabase.com",
-      phone: "+1 (861) 567-3405",
-      address: "791 Sumner Place, Titanic, Mississippi, 4141",
-    },
-    secondParent: {
-      birthdate: "2019-10-\t\t27T09:58:44 -00:00",
-      gender: "female",
-      firstname: "Juarez",
-      lastname: "Mccormick",
-      email: "juarezmccormick@dadabase.com",
-      phone: "+1 (970) 490-3545",
-      address: "412 India Street, Grimsley, Puerto Rico, 891",
-    },
-    compagny: {
-      name: "NORALI",
-      address: "175 Fulton Street, Harrodsburg, Louisiana, 2193",
-    },
-    comment:
-      "velit irure do tempor ea amet Lorem id ex cillum culpa Lorem aute minim consectetur laborum occaecat tempor ea quis et ex enim duis proident consequat dolore in exercitation consectetur",
-  },
-  {
-    id: "67a8d16d1b17b4a45ace1768",
-    registred: "2021-09-20T10:56:05 -00:00",
-    child: {
-      birthdate: "2021-03-\t\t23T04:12:37 -00:00",
-      gender: "male",
-      firstname: "Burke",
-      lastname: "Gilliam",
-    },
-    firstParent: {
-      birthdate: "2019-03-\t\t20T08:33:02 -00:00",
-      gender: "male",
-      firstname: "Lester",
-      lastname: "Morse",
-      email: "lestermorse@norali.com",
-      phone: "+1 (885) 582-3032",
-      address: "255 College Place, Barrelville, New York, 6942",
-    },
-    secondParent: {
-      birthdate: "2020-07-\t\t28T03:09:28 -00:00",
-      gender: "male",
-      firstname: "Bender",
-      lastname: "Phillips",
-      email: "benderphillips@norali.com",
-      phone: "+1 (927) 495-2347",
-      address: "285 Montrose Avenue, Salunga, Illinois, 7799",
-    },
-    compagny: {
-      name: "MYOPIUM",
-      address: "853 Cameron Court, Sutton, Missouri, 4815",
-    },
-    comment:
-      "laboris esse incididunt sunt cillum laboris ad laborum reprehenderit do qui ea ullamco qui nostrud ex fugiat nisi cillum voluptate elit nostrud magna Lorem minim nostrud irure eiusmod qui irure",
-  },
-  {
-    id: "67a8d16d70e1a6cd2b33a53c",
-    registred: "2021-02-28T09:03:57 -00:00",
-    child: {
-      birthdate: "2017-05-\t\t25T12:41:35 -00:00",
-      gender: "male",
-      firstname: "Navarro",
-      lastname: "Workman",
-    },
-    firstParent: {
-      birthdate: "2020-12-\t\t16T01:10:36 -00:00",
-      gender: "male",
-      firstname: "Velasquez",
-      lastname: "Daniel",
-      email: "velasquezdaniel@myopium.com",
-      phone: "+1 (971) 412-2712",
-      address: "419 Olive Street, Draper, Colorado, 197",
-    },
-    secondParent: {
-      birthdate: "2015-03-\t\t07T03:45:13 -00:00",
-      gender: "male",
-      firstname: "Thornton",
-      lastname: "Steele",
-      email: "thorntonsteele@myopium.com",
-      phone: "+1 (993) 489-2593",
-      address: "534 Foster Avenue, Ola, Kansas, 8322",
-    },
-    compagny: {
-      name: "RECRITUBE",
-      address: "857 Franklin Avenue, Saranap, Arkansas, 4719",
-    },
-    comment:
-      "aute enim pariatur aliqua sint dolore excepteur in laboris qui sunt ad exercitation aute reprehenderit enim ea veniam voluptate cillum nisi sint laborum aute nisi mollit nostrud eu eu cupidatat",
-  },
-  {
-    id: "67a8d16d1fc9ba46e47181e8",
-    registred: "2016-08-17T06:49:23 -00:00",
-    child: {
-      birthdate: "2015-07-\t\t11T03:40:31 -00:00",
-      gender: "male",
-      firstname: "Letitia",
-      lastname: "Hernandez",
-    },
-    firstParent: {
-      birthdate: "2022-03-\t\t08T02:49:35 -00:00",
-      gender: "female",
-      firstname: "Jones",
-      lastname: "Mann",
-      email: "jonesmann@recritube.com",
-      phone: "+1 (818) 593-3192",
-      address: "535 Thatford Avenue, Carbonville, Maine, 7037",
-    },
-    secondParent: {
-      birthdate: "2014-07-\t\t24T04:16:31 -00:00",
-      gender: "male",
-      firstname: "Moore",
-      lastname: "Briggs",
-      email: "moorebriggs@recritube.com",
-      phone: "+1 (912) 423-2893",
-      address: "578 Brooklyn Road, Sperryville, Iowa, 367",
-    },
-    compagny: {
-      name: "PHUEL",
-      address: "134 Seaview Avenue, Sims, Wisconsin, 325",
-    },
-    comment:
-      "proident adipisicing eu nisi qui ipsum consectetur minim fugiat irure esse et reprehenderit esse occaecat labore Lorem dolore non occaecat do commodo reprehenderit ullamco occaecat irure reprehenderit nostrud voluptate ullamco",
-  },
-  {
-    id: "67a8d16d656e21e99590cf56",
-    registred: "2024-07-26T05:59:38 -00:00",
-    child: {
-      birthdate: "2023-08-\t\t11T11:33:18 -00:00",
-      gender: "male",
-      firstname: "Mclean",
-      lastname: "Hickman",
-    },
-    firstParent: {
-      birthdate: "2021-01-\t\t07T11:35:48 -00:00",
-      gender: "male",
-      firstname: "York",
-      lastname: "Mcintosh",
-      email: "yorkmcintosh@phuel.com",
-      phone: "+1 (975) 402-3645",
-      address: "598 Waldane Court, Caron, Michigan, 7576",
-    },
-    secondParent: {
-      birthdate: "2017-05-\t\t24T11:46:29 -00:00",
-      gender: "male",
-      firstname: "Marjorie",
-      lastname: "Dennis",
-      email: "marjoriedennis@phuel.com",
-      phone: "+1 (972) 459-3662",
-      address: "287 Nova Court, Blanco, West Virginia, 8191",
-    },
-    compagny: {
-      name: "ANDRYX",
-      address: "208 Quincy Street, Lutsen, Vermont, 396",
-    },
-    comment:
-      "nostrud aliqua non occaecat pariatur in magna est amet ea do aliqua anim incididunt occaecat nostrud aliquip nulla aute excepteur occaecat culpa exercitation nisi incididunt sint fugiat ex consequat eu",
-  },
-  {
-    id: "67a8d16d5fee9035ad02f17d",
-    registred: "2017-04-17T12:53:26 -00:00",
-    child: {
-      birthdate: "2019-12-\t\t12T03:55:22 -00:00",
-      gender: "female",
-      firstname: "Case",
-      lastname: "Dorsey",
-    },
-    firstParent: {
-      birthdate: "2021-11-\t\t02T06:40:36 -00:00",
-      gender: "male",
-      firstname: "Trina",
-      lastname: "Harvey",
-      email: "trinaharvey@andryx.com",
-      phone: "+1 (951) 570-3313",
-      address: "855 Tapscott Street, Marenisco, District Of Columbia, 9778",
-    },
-    secondParent: {
-      birthdate: "2014-02-\t\t09T09:15:35 -00:00",
-      gender: "female",
-      firstname: "Jordan",
-      lastname: "Mccarty",
-      email: "jordanmccarty@andryx.com",
-      phone: "+1 (978) 521-3633",
-      address: "852 Cherry Street, Tooleville, South Carolina, 7289",
-    },
-    compagny: {
-      name: "PASTURIA",
-      address: "503 Downing Street, Greenfields, Massachusetts, 4789",
-    },
-    comment:
-      "mollit et cupidatat sit cupidatat ex incididunt elit commodo fugiat et proident fugiat sunt ea sint eu commodo laborum aute officia sunt mollit duis magna consequat in et duis aliqua",
-  },
-  {
-    id: "67a8d16d36c8cfd93156d966",
-    registred: "2014-02-27T04:23:42 -00:00",
-    child: {
-      birthdate: "2016-11-\t\t20T04:24:54 -00:00",
-      gender: "female",
-      firstname: "Jarvis",
-      lastname: "Fields",
-    },
-    firstParent: {
-      birthdate: "2018-08-\t\t22T11:42:41 -00:00",
-      gender: "male",
-      firstname: "Susana",
-      lastname: "Cruz",
-      email: "susanacruz@pasturia.com",
-      phone: "+1 (919) 567-2243",
-      address: "935 Beaver Street, Loma, Pennsylvania, 7069",
-    },
-    secondParent: {
-      birthdate: "2019-11-\t\t25T09:14:08 -00:00",
-      gender: "female",
-      firstname: "Holland",
-      lastname: "Figueroa",
-      email: "hollandfigueroa@pasturia.com",
-      phone: "+1 (842) 495-3820",
-      address: "388 Pershing Loop, Rockbridge, Minnesota, 5405",
-    },
-    compagny: {
-      name: "COMSTAR",
-      address: "378 Hendrickson Street, Grill, California, 2600",
-    },
-    comment:
-      "est exercitation pariatur veniam excepteur sit do magna magna culpa non eu laboris magna et in non laboris velit aute nulla ad id ex aliqua culpa deserunt eiusmod et ad",
-  },
-  {
-    id: "67a8d16d9e5f381cde341791",
-    registred: "2014-10-17T11:47:24 -00:00",
-    child: {
-      birthdate: "2024-07-\t\t25T07:44:30 -00:00",
-      gender: "male",
-      firstname: "Lilly",
-      lastname: "Reid",
-    },
-    firstParent: {
-      birthdate: "2023-01-\t\t04T11:25:36 -00:00",
-      gender: "female",
-      firstname: "Morse",
-      lastname: "Smith",
-      email: "morsesmith@comstar.com",
-      phone: "+1 (828) 458-3957",
-      address: "496 Verona Street, Montura, Idaho, 9743",
-    },
-    secondParent: {
-      birthdate: "2021-09-\t\t28T05:14:08 -00:00",
-      gender: "male",
-      firstname: "Lindsay",
-      lastname: "West",
-      email: "lindsaywest@comstar.com",
-      phone: "+1 (937) 465-3747",
-      address: "960 Kosciusko Street, Chilton, Palau, 6879",
-    },
-    compagny: {
-      name: "COMFIRM",
-      address: "557 Cropsey Avenue, Ladera, Kentucky, 4040",
-    },
-    comment:
-      "dolor pariatur ad eiusmod et magna fugiat adipisicing ea nisi nisi Lorem ipsum laborum consequat occaecat tempor deserunt consequat proident nostrud consequat in ipsum ut elit officia irure consequat veniam",
-  },
-  {
-    id: "67a8d16d308218badebc5806",
-    registred: "2019-07-23T01:21:27 -00:00",
-    child: {
-      birthdate: "2024-11-\t\t22T03:18:58 -00:00",
-      gender: "female",
-      firstname: "Karyn",
-      lastname: "Morrow",
-    },
-    firstParent: {
-      birthdate: "2018-10-\t\t01T09:19:58 -00:00",
-      gender: "female",
-      firstname: "Felecia",
-      lastname: "Hughes",
-      email: "feleciahughes@comfirm.com",
-      phone: "+1 (922) 442-3660",
-      address: "439 Tehama Street, Thynedale, Virgin Islands, 5666",
-    },
-    secondParent: {
-      birthdate: "2024-06-\t\t01T02:32:37 -00:00",
-      gender: "female",
-      firstname: "Stark",
-      lastname: "Knapp",
-      email: "starkknapp@comfirm.com",
-      phone: "+1 (871) 434-2406",
-      address: "306 Goodwin Place, Virgie, Alabama, 5229",
-    },
-    compagny: {
-      name: "ECRATIC",
-      address: "261 Boerum Place, Lydia, Montana, 557",
-    },
-    comment:
-      "deserunt duis ullamco tempor enim adipisicing esse minim consequat fugiat minim laborum esse quis nulla nulla consectetur veniam reprehenderit laborum excepteur esse veniam duis voluptate incididunt et ipsum qui consectetur",
-  },
-  {
-    id: "67a8d16d4ef2ffc86ed4179f",
-    registred: "2023-03-02T05:51:44 -00:00",
-    child: {
-      birthdate: "2014-12-\t\t27T07:23:11 -00:00",
-      gender: "male",
-      firstname: "Tracie",
-      lastname: "Harding",
-    },
-    firstParent: {
-      birthdate: "2022-12-\t\t02T06:23:12 -00:00",
-      gender: "female",
-      firstname: "Dodson",
-      lastname: "Potter",
-      email: "dodsonpotter@ecratic.com",
-      phone: "+1 (971) 577-3703",
-      address: "836 Duffield Street, Frank, American Samoa, 2003",
-    },
-    secondParent: {
-      birthdate: "2017-12-\t\t15T10:05:11 -00:00",
-      gender: "male",
-      firstname: "Mann",
-      lastname: "Middleton",
-      email: "mannmiddleton@ecratic.com",
-      phone: "+1 (978) 590-3016",
-      address: "412 Oxford Walk, Bridgetown, Utah, 8648",
-    },
-    compagny: {
-      name: "NORSUL",
-      address: "165 Richards Street, Nettie, Washington, 3501",
-    },
-    comment:
-      "dolor non eu cillum est in labore dolor eiusmod quis culpa occaecat officia eiusmod esse ea ad excepteur irure adipisicing aliquip et fugiat fugiat reprehenderit sint consectetur irure magna est",
-  },
-  {
-    id: "67a8d16d76896c583a35f114",
-    registred: "2016-12-15T05:37:32 -00:00",
-    child: {
-      birthdate: "2015-02-\t\t28T04:22:19 -00:00",
-      gender: "male",
-      firstname: "Edwards",
-      lastname: "Riggs",
-    },
-    firstParent: {
-      birthdate: "2019-05-\t\t17T02:47:45 -00:00",
-      gender: "male",
-      firstname: "Esmeralda",
-      lastname: "Jarvis",
-      email: "esmeraldajarvis@norsul.com",
-      phone: "+1 (974) 432-3874",
-      address: "618 Thames Street, Grayhawk, Guam, 8451",
-    },
-    secondParent: {
-      birthdate: "2024-09-\t\t19T12:01:02 -00:00",
-      gender: "female",
-      firstname: "Alba",
-      lastname: "Sellers",
-      email: "albasellers@norsul.com",
-      phone: "+1 (979) 494-2526",
-      address: "111 Whitty Lane, Vivian, Texas, 3041",
-    },
-    compagny: {
-      name: "VERTIDE",
-      address: "109 Congress Street, Bowden, Arizona, 8773",
-    },
-    comment:
-      "id mollit elit deserunt minim ut tempor cupidatat aliqua magna aute proident reprehenderit aute voluptate qui ipsum labore eu sit eu consequat enim adipisicing irure eiusmod amet enim ad occaecat",
-  },
-];
-
-function handleDetailClick(id) {
+function search() {}
+/*function handleDetailClick(id) {
   const filteteredDeclarations = DECLARATIONS.filter((item) => item.id === id);
   if (filteteredDeclarations.length) {
     const declaration = filteteredDeclarations[0];
@@ -554,33 +8,34 @@ function handleDetailClick(id) {
     console.log("====================================");
   }
   // traitement non achevé; aucun impact sur le html;
-}
+}*/
 
-const COLONNES = `
-<div class="row">    
-    <div class="col">
-      Date
-    </div>
-    <div class="col">
-      Parent 1
-    </div>
-    <div class="col">
-     Parent 2
-    </div>
-    <div class="col">
-      Enfant
-    </div>
-    <div class="col">
-        Hopital
-    </div>
-     <div class="col">
-        Action
-    </div>
-</div>
- `;
+const handleDetailClick = () => null;
 
-function handleOnload() {
-  const T_DECLARATIONS = DECLARATIONS.map((declaration, index) => {
+const handleDeclarations = (declarations) => {
+  const COLONNES = `
+    <div class="row">    
+        <div class="col">
+          Date
+        </div>
+        <div class="col">
+          Parent 1
+        </div>
+        <div class="col">
+        Parent 2
+        </div>
+        <div class="col">
+          Enfant
+        </div>
+        <div class="col">
+            Hopital
+        </div>
+        <div class="col">
+            Action
+        </div>
+    </div>
+   `;
+  const T_DECLARATIONS = declarations.map((declaration, index) => {
     const {
       id,
       registred,
@@ -640,4 +95,62 @@ function handleOnload() {
   //document.getElementById("les_declarations").innerHTML =
   //T_DECLARATIONS.join("");
   document.getElementById("les_declarations").innerHTML = LINES.join("");
+};
+
+async function handleOnload() {
+  const response = await fetch("http://localhost:8080/declarations");
+  const data = await response.json();
+  handleDeclarations(data);
+
+  /* .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then((data) => {
+      handleDeclarations(data);
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log("===================");
+      console.log({ error });
+      console.log("===================");
+    }); */
+}
+
+async function handleNewDeclaration(event) {
+  event.preventDefault();
+  const { target } = event;
+  console.log("====================================");
+  console.log(target);
+  console.log("====================================");
+  const formData = new FormData(target);
+  console.log("====================================");
+
+  const fpFirstName = formData.get("fpfirstname");
+  const fpLastName = formData.get("fplastname");
+  const spFirstName = formData.get("spfirstname");
+  const spLastName = formData.get("splastname");
+  const chFirstName = formData.get("chfirstname");
+  const chLastName = formData.get("chlastname");
+  const declaration = {
+    firstParent: { firstname: fpFirstName, lastname: fpLastName },
+    secondParent: { firstname: spFirstName, lastname: spLastName },
+    child: { firstname: chFirstName, lastname: chLastName },
+  };
+  try {
+    const response = await fetch("http://localhost:8080/declarations", {
+      method: "POST",
+      body: JSON.stringify(declaration),
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+    });
+    const data = await response.json();
+    //console.log({ data });
+  } catch (error) {
+    console.log("====================================");
+    console.log({ error });
+    console.log("====================================");
+  }
+  console.log("====================================");
 }
